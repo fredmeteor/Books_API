@@ -16,6 +16,7 @@ class DebugTest extends TestCase
     public function test_it_can_return_fine_debug_messages()
     {$response = $this->get('/');
         $response->assertStatus(200);
+        //Debugging Responses
 $response->dumpHeaders();
 $response->dumpSession();
 $response->dump();

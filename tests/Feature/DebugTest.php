@@ -17,8 +17,8 @@ class DebugTest extends TestCase
     {$response = $this->get('/');
         $response->assertStatus(200);
         //Debugging Responses
-$response->dumpHeaders();
-$response->dumpSession();
-$response->dump();
+//$response->dumpHeaders();
+//$response->dumpSession();
+//$response->dump();
     }
 }

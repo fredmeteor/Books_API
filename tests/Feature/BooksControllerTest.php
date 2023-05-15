@@ -51,7 +51,15 @@ $this->assertArrayHasKey('updated_at', $data);
 /** @test **/
 public function show_should_fail_when_the_book_id_does_not_exist()
 {
-$this->markTestIncomplete('Pending test');
+//$this->markTestIncomplete('Pending test');
+$response = $this
+->getJson('/books/99999',[
+'error' => [
+'message' => 'Book not found'
+]
+]);
+
+$response->assertStatus(404);
 }
 
 /** @test **/
@@ -59,6 +67,13 @@ $this->markTestIncomplete('Pending test');
 public function show_route_should_not_match_an_invalid_route()
 {
 $this->markTestIncomplete('Pending test');
+// $response = $this->get('/books/this-is-invalid');
+// $this->assertNotRegExp(
+// '/Book not found/',
+// $this->$response->getContent(),
+// 'BooksController@show route matching when it should not.'
+// );
+// $response->assertStatus(404);
 }
 }
 

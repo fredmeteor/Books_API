@@ -13,9 +13,9 @@ class BooksControllerTest extends TestCase
      *
      * @return void
      */
-    public function test_example()
+    public function test_index_status_code_should_be_200()
     {
-        $response = $this->get('/');
+        $response = $this->get('/books');
 
         $response->assertStatus(200);
     }

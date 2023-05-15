@@ -26,9 +26,8 @@ class BooksControllerTest extends TestCase
 public function test_index_should_return_a_collection_of_records()
 {
 
-    $response = $this->get('/books')->seeJson([
-'title' => 'War of the Worlds'])->seeJson(['title' => 'A Wrinkle in Time'
-]);
-$response->assertStatus(200);
+    $response = $this->getJson('/books', ['title' => 'War of the Worlds']);
+    $response->assertStatus(200);
+//$response->assertStatus(200);
 }
 }

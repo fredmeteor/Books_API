@@ -17,8 +17,7 @@ class BooksTableSeeder extends Seeder
         //
         DB::table('books')->insert([
             'title' => 'War of the Worlds',
-            'description' => 'A science fiction masterpiece about Martians invad
-            ing London',
+            'description' => 'A science fiction masterpiece about Martians invading London',
             'author' => 'H. G. Wells',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),

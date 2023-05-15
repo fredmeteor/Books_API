@@ -21,4 +21,5 @@ Auth::routes();
 
 //The controller_namespace should be used
 Route::get('/books', 'App\Http\Controllers\BooksController@index');
+Route::get('/books/{id}', 'App\Http\Controllers\BooksController@show');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
